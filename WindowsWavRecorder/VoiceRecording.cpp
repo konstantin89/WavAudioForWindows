@@ -1,13 +1,4 @@
 
-/*
-* Author: Kosta Bulgakov
-*
-* Date: 05/10/2016
-*
-* Brief: This file contains source of class
-*        that used as windows audio recording tool.
-*
-*/
 #include "VoiceRecording.h"
 
 
@@ -112,8 +103,7 @@ void CALLBACK VoiceWaveInProc(HWAVEIN hwi, UINT uMsg, DWORD dwInstance, DWORD dw
 		
 		pVoice->res=waveInUnprepareHeader(pVoice->hWaveIn, &pVoice->WaveHeader, sizeof(WAVEHDR));
 		pVoice->GetMMResult(pVoice->res);
-		pVoice->RecordFinished();
-
+		
 		if (pVoice->res != MMSYSERR_NOERROR)
 		{
 			debug_log(GetLastError());
@@ -122,7 +112,3 @@ void CALLBACK VoiceWaveInProc(HWAVEIN hwi, UINT uMsg, DWORD dwInstance, DWORD dw
 	}
 }
 
-void CVoiceRecording::RecordFinished()
-{
-	/* EMPTY */
-}

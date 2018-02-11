@@ -1,15 +1,5 @@
 
-/*
-* Author: Kosta Bulgakov
-*
-* Date: 05/10/2016
-*
-* Brief: This file contains source of class
-*        that used as windows audio playing tool.
-*
-*/
 #include "VoicePlaying.h"
-
 
 CVoicePlaying::CVoicePlaying()
 {

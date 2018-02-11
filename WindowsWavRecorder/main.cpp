@@ -1,16 +1,35 @@
+/**********************************************************
+*
+* @author: Konstantin Bulgakov
+* 
+* @brief: This file is example of WavManager module usage. 
+*
+*         Usage of the following operations is shown:
+*         a. Record audio. 
+*         b. Play recorded audio and save.
+*         c. Recorded audio to disk.
+*
+**********************************************************/
+
 #include <memory>
 #include "WavManager.h"
 #include "WavRecord.h"
 #include "common.h"
 
-#define AUDIO_REC_DURATION 1
+// Length of recorded audio (in seconds).
+#define AUDIO_REC_DURATION 3
+
+// Name of the created wav file.
 #define WAV_FILE_NAME L"record.wav"
 
+/**
+* Usage example of WavManager class.
+*/
 int main()
 {
 	debug_log("Starting Example Programm");
 
-	std::unique_ptr<WavManager> lManagerPtr = std::make_unique<WavManager>();
+	auto lManagerPtr = std::make_unique<WavManager>();
 
 	debug_log("Recording audio");
 	auto lRecordPtr = lManagerPtr->recordWavBlocking(AUDIO_REC_DURATION);
@@ -35,3 +54,6 @@ int main()
 	}
 	return SUCCESS;
 }
+
+
+/****************************** End Of File ********************************/

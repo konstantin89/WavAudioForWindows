@@ -1,14 +1,4 @@
 
-/*
-* Author: Kosta Bulgakov
-*
-* Date: 05/10/2016
-*
-* Brief: This file contains source of base class
-*        for windows audio recording tool.
-*
-*/
-
 #include "VoiceBase.h"
 #include "WavHeader.h"
 

@@ -1,19 +1,8 @@
 
-/*
-* Author: Kosta Bulgakov
-*
-* Date: 05/10/2016
-*
-* Brief: This file contains header of class
-*        that used as windows audio recording tool.
-*
-*/
-
 #ifndef _VOICE_RECORDING_H
 #define _VOICE_RECORDING_H
 
 #include "VoiceBase.h"
-#include <iostream>
 
 void CALLBACK VoiceWaveInProc(
 						 HWAVEIN hwi,       
@@ -39,35 +28,36 @@ public:
 	* Destructor.
 	*/
 	virtual ~CVoiceRecording();
+	
 	/**
-	*
-	*/
-	virtual void RecordFinished();
-
-	/**
-	*
+	* Check if Wav handle is open. 
 	*/
 	BOOL IsOpen();
 
 	/**
-	*
+	* Close Wav handle.
 	*/
 	BOOL Close();
 
 	/**
-	*
+	* Open Wav handle.
 	*/
 	BOOL Open();
 
 	/**
-	*
+	* Record audio.
 	*/
     BOOL Record();
 
-
+	// Wav input handle.
     HWAVEIN hWaveIn;
+
+	// Event that is signaled when audio record is done.
 	HANDLE hRecordIsDoneEvent;
 
 };
 
 #endif
+
+
+/************************ End Of File **************************/

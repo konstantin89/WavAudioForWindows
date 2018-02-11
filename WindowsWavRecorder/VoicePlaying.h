@@ -1,13 +1,4 @@
 
-/*
-* Author: Kosta Bulgakov
-*
-* Date: 05/10/2016
-*
-* Brief: This file contains header of class
-*        that used as windows audio playing tool.
-*
-*/
 #ifndef _VIOCE_PLAYING_H
 #define _VIOCE_PLAYING_H
 
@@ -52,16 +43,17 @@ public:
 	*/
     BOOL Play();
 	
-	/*
-	* Handle for output audio wave.
-	*/
+	
+	// Handle for output audio wav.
 	HWAVEOUT hWaveOut;
 
-	/**
-	*
-	*/
+	// Event that is signaled when audio is done playing.
 	HANDLE mAudioPlayIsDoneEvent;
 
 };
 
 #endif
+
+
+
+/************************* End Of File **************************/
