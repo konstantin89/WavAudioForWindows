@@ -6,8 +6,8 @@
 *
 *         Usage of the following operations is shown:
 *         a. Record audio. 
-*         b. Play recorded audio and save.
-*         c. Recorded audio to disk.
+*         b. Play recorded audio.
+*         c. Save recorded audio to disk.
 *
 **********************************************************/
 
